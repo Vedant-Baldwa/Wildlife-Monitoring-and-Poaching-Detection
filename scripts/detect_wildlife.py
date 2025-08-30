@@ -179,11 +179,15 @@ class WildlifeDetector:
             cv2.imwrite(str(output_path), annotated_image)
             logging.info(f"Result saved to: {output_path}")
         
-        # Show result
+        # Show result (with error handling for Windows)
         if show_result:
-            cv2.imshow('Wildlife Detection', annotated_image)
-            cv2.waitKey(0)
-            cv2.destroyAllWindows()
+            try:
+                cv2.imshow('Wildlife Detection', annotated_image)
+                cv2.waitKey(0)
+                cv2.destroyAllWindows()
+            except Exception as e:
+                logging.warning(f"Could not display image (this is normal on some systems): {e}")
+                logging.info("Image processing completed. Check the saved output file if specified.")
         
         return results
     

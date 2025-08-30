@@ -1,6 +1,6 @@
 # Dataset and Data Files
-African Wildlife
-Animals Dataset
+African Wildlife/
+Animals Dataset/
 dataset/
 Unified Dataset/
 *.jpg
@@ -16,7 +16,7 @@ Unified Dataset/
 *.wmv
 *.flv
 *.webm
-
+test_predictions/
 # Model Weights and Results
 results/
 *.pt
