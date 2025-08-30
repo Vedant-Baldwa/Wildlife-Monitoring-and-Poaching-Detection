@@ -1,0 +1,119 @@
+# Dataset and Data Files
+dataset/
+Unified Dataset/
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
+*.tif
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wmv
+*.flv
+*.webm
+
+# Model Weights and Results
+results/
+*.pt
+*.pth
+*.onnx
+*.torchscript
+*.weights
+*.h5
+*.hdf5
+*.pb
+*.tflite
+*.mlmodel
+
+# Training Artifacts
+runs/
+wandb/
+mlruns/
+checkpoints/
+logs/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyTorch
+*.pkl
+*.pickle
+
+# Temporary Files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Large Files (over 100MB)
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+
+# Configuration files with sensitive data
+.env
+config.ini
+secrets.json
+
+# Cache files
+.cache/
+*.cache
+
+# Backup files
+*.bak
+*.backup
