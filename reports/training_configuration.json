@@ -1,0 +1,148 @@
+{
+    "training_configuration": {
+        "project_name": "Wildlife Detection v2",
+        "model": "YOLOv8s",
+        "framework": "Ultralytics",
+        "version": "8.3.184",
+        "created_date": "2025-08-30"
+    },
+    "model_specifications": {
+        "architecture": "YOLOv8s",
+        "parameters": 11149516,
+        "gradients": 11149516,
+        "gflops": 28.7,
+        "input_size": [
+            640,
+            640
+        ],
+        "output_shape": [
+            1,
+            40,
+            8400
+        ],
+        "pretrained": true,
+        "transfer_learning": true
+    },
+    "hardware_configuration": {
+        "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+        "gpu_memory": "6.0 GB",
+        "cuda_version": "Available",
+        "device_id": 0,
+        "optimization": "Mixed Precision (AMP) enabled"
+    },
+    "training_parameters": {
+        "epochs": 100,
+        "batch_size": 8,
+        "image_size": 640,
+        "patience": 50,
+        "save_period": 10,
+        "validation_frequency": "Every epoch"
+    },
+    "optimization_settings": {
+        "optimizer": "AdamW",
+        "learning_rate": {
+            "initial": 0.0005,
+            "final": 0.0001,
+            "schedule": "Cosine Annealing"
+        },
+        "momentum": 0.937,
+        "weight_decay": 0.0005,
+        "warmup_epochs": 3.0,
+        "warmup_bias_lr": 0.01,
+        "warmup_momentum": 0.8
+    },
+    "loss_configuration": {
+        "box_loss_weight": 0.7,
+        "class_loss_weight": 0.3,
+        "dfl_loss_weight": 1.5,
+        "label_smoothing": 0.0
+    },
+    "data_augmentation": {
+        "enabled": true,
+        "techniques": [
+            "Blur (p=0.01, blur_limit=(3, 7))",
+            "MedianBlur (p=0.01, blur_limit=(3, 7))",
+            "ToGray (p=0.01, method='weighted_average')",
+            "CLAHE (p=0.01, clip_limit=(1.0, 4.0))"
+        ],
+        "mosaic": true,
+        "close_mosaic": 10
+    },
+    "dataset_configuration": {
+        "train_path": "dataset/train/images",
+        "val_path": "dataset/val/images",
+        "test_path": "dataset/test/images",
+        "data_yaml": "dataset/data.yaml",
+        "classes": 36,
+        "workers": 4,
+        "cache": false
+    },
+    "monitoring_and_logging": {
+        "project": "results",
+        "name": "wildlife_detection_v2",
+        "plots": true,
+        "verbose": true,
+        "save_period": 10,
+        "artifact_alias": "latest"
+    },
+    "export_settings": {
+        "export_after_train": true,
+        "export_formats": [
+            "onnx",
+            "torchscript"
+        ],
+        "include_optimizer": false
+    },
+    "performance_optimization": {
+        "amp": true,
+        "deterministic": false,
+        "single_cls": false,
+        "rect": false,
+        "quad": false,
+        "profile": false
+    },
+    "validation_settings": {
+        "validation_enabled": true,
+        "validation_frequency": "Every epoch",
+        "metrics": [
+            "mAP50",
+            "mAP50-95",
+            "precision",
+            "recall"
+        ],
+        "conf_threshold": 0.001,
+        "iou_threshold": 0.6
+    },
+    "early_stopping": {
+        "enabled": true,
+        "patience": 50,
+        "metric": "mAP50",
+        "mode": "max"
+    },
+    "checkpointing": {
+        "save_best": true,
+        "save_last": true,
+        "save_period": 10,
+        "save_optimizer": false
+    },
+    "test_epoch_results": {
+        "execution_time": "5.39 minutes",
+        "gpu_memory_peak": "1.26GB",
+        "validation_mAP50": 0.0753,
+        "box_precision": 0.82,
+        "box_recall": 0.0739,
+        "status": "SUCCESS"
+    },
+    "recommendations": {
+        "batch_size": "Optimal for RTX 4050 6GB VRAM",
+        "learning_rate": "Conservative for stable training",
+        "patience": "Appropriate for complex 36-class detection",
+        "monitoring": "Watch for overfitting after 50 epochs"
+    },
+    "expected_training_time": {
+        "estimated_hours": "8-12 hours",
+        "epochs_per_hour": "8-12",
+        "total_epochs": 100,
+        "early_stopping_expected": "50-80 epochs"
+    }
+}

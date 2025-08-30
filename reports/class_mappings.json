@@ -1,0 +1,277 @@
+{
+    "dataset_info": {
+        "name": "Wildlife Detection Dataset",
+        "version": "1.0",
+        "description": "Multi-class wildlife detection dataset with 36 animal species",
+        "created_date": "2025-08-30",
+        "total_classes": 36
+    },
+    "class_mappings": [
+        {
+            "class_id": 0,
+            "class_name": "Bear",
+            "description": "General bear species",
+            "category": "Mammal",
+            "habitat": "Forest, Mountain"
+        },
+        {
+            "class_id": 1,
+            "class_name": "Brown bear",
+            "description": "Ursus arctos - Brown bear species",
+            "category": "Mammal",
+            "habitat": "Forest, Mountain, Tundra"
+        },
+        {
+            "class_id": 2,
+            "class_name": "Buffalo",
+            "description": "African buffalo or water buffalo",
+            "category": "Mammal",
+            "habitat": "Savanna, Grassland"
+        },
+        {
+            "class_id": 3,
+            "class_name": "Bull",
+            "description": "Male cattle",
+            "category": "Mammal",
+            "habitat": "Farm, Grassland"
+        },
+        {
+            "class_id": 4,
+            "class_name": "Cattle",
+            "description": "Domestic cattle",
+            "category": "Mammal",
+            "habitat": "Farm, Grassland"
+        },
+        {
+            "class_id": 5,
+            "class_name": "Cheetah",
+            "description": "Acinonyx jubatus - Fastest land animal",
+            "category": "Mammal",
+            "habitat": "Savanna, Grassland"
+        },
+        {
+            "class_id": 6,
+            "class_name": "Chicken",
+            "description": "Domestic chicken",
+            "category": "Bird",
+            "habitat": "Farm, Domestic"
+        },
+        {
+            "class_id": 7,
+            "class_name": "Deer",
+            "description": "Various deer species",
+            "category": "Mammal",
+            "habitat": "Forest, Grassland"
+        },
+        {
+            "class_id": 8,
+            "class_name": "Elephant",
+            "description": "African or Asian elephant",
+            "category": "Mammal",
+            "habitat": "Savanna, Forest"
+        },
+        {
+            "class_id": 9,
+            "class_name": "Fox",
+            "description": "Various fox species",
+            "category": "Mammal",
+            "habitat": "Forest, Desert, Urban"
+        },
+        {
+            "class_id": 10,
+            "class_name": "Giraffe",
+            "description": "Giraffa camelopardalis - Tallest land animal",
+            "category": "Mammal",
+            "habitat": "Savanna, Grassland"
+        },
+        {
+            "class_id": 11,
+            "class_name": "Goat",
+            "description": "Domestic goat",
+            "category": "Mammal",
+            "habitat": "Farm, Mountain"
+        },
+        {
+            "class_id": 12,
+            "class_name": "Hippopotamus",
+            "description": "Hippopotamus amphibius - River horse",
+            "category": "Mammal",
+            "habitat": "River, Lake"
+        },
+        {
+            "class_id": 13,
+            "class_name": "Horse",
+            "description": "Domestic horse",
+            "category": "Mammal",
+            "habitat": "Farm, Grassland"
+        },
+        {
+            "class_id": 14,
+            "class_name": "Jaguar",
+            "description": "Panthera onca - Large cat species",
+            "category": "Mammal",
+            "habitat": "Forest, Jungle"
+        },
+        {
+            "class_id": 15,
+            "class_name": "Kangaroo",
+            "description": "Various kangaroo species",
+            "category": "Mammal",
+            "habitat": "Grassland, Desert"
+        },
+        {
+            "class_id": 16,
+            "class_name": "Koala",
+            "description": "Phascolarctos cinereus - Tree-dwelling marsupial",
+            "category": "Mammal",
+            "habitat": "Forest, Eucalyptus"
+        },
+        {
+            "class_id": 17,
+            "class_name": "Leopard",
+            "description": "Panthera pardus - Spotted big cat",
+            "category": "Mammal",
+            "habitat": "Forest, Savanna"
+        },
+        {
+            "class_id": 18,
+            "class_name": "Lion",
+            "description": "Panthera leo - King of the jungle",
+            "category": "Mammal",
+            "habitat": "Savanna, Grassland"
+        },
+        {
+            "class_id": 19,
+            "class_name": "Lynx",
+            "description": "Various lynx species",
+            "category": "Mammal",
+            "habitat": "Forest, Mountain"
+        },
+        {
+            "class_id": 20,
+            "class_name": "Monkey",
+            "description": "Various monkey species",
+            "category": "Mammal",
+            "habitat": "Forest, Jungle"
+        },
+        {
+            "class_id": 21,
+            "class_name": "Mule",
+            "description": "Hybrid of horse and donkey",
+            "category": "Mammal",
+            "habitat": "Farm, Mountain"
+        },
+        {
+            "class_id": 22,
+            "class_name": "Ostrich",
+            "description": "Struthio camelus - Largest bird",
+            "category": "Bird",
+            "habitat": "Savanna, Desert"
+        },
+        {
+            "class_id": 23,
+            "class_name": "Otter",
+            "description": "Various otter species",
+            "category": "Mammal",
+            "habitat": "River, Coast"
+        },
+        {
+            "class_id": 24,
+            "class_name": "Panda",
+            "description": "Giant panda - Bamboo eater",
+            "category": "Mammal",
+            "habitat": "Forest, Mountain"
+        },
+        {
+            "class_id": 25,
+            "class_name": "Penguin",
+            "description": "Various penguin species",
+            "category": "Bird",
+            "habitat": "Antarctic, Coast"
+        },
+        {
+            "class_id": 26,
+            "class_name": "Pig",
+            "description": "Domestic pig",
+            "category": "Mammal",
+            "habitat": "Farm, Forest"
+        },
+        {
+            "class_id": 27,
+            "class_name": "Polar bear",
+            "description": "Ursus maritimus - Arctic bear",
+            "category": "Mammal",
+            "habitat": "Arctic, Ice"
+        },
+        {
+            "class_id": 28,
+            "class_name": "Rabbit",
+            "description": "Domestic rabbit",
+            "category": "Mammal",
+            "habitat": "Farm, Grassland"
+        },
+        {
+            "class_id": 29,
+            "class_name": "Raccoon",
+            "description": "Procyon lotor - Masked bandit",
+            "category": "Mammal",
+            "habitat": "Forest, Urban"
+        },
+        {
+            "class_id": 30,
+            "class_name": "Red panda",
+            "description": "Ailurus fulgens - Fire fox",
+            "category": "Mammal",
+            "habitat": "Forest, Mountain"
+        },
+        {
+            "class_id": 31,
+            "class_name": "Rhinoceros",
+            "description": "Various rhinoceros species",
+            "category": "Mammal",
+            "habitat": "Savanna, Grassland"
+        },
+        {
+            "class_id": 32,
+            "class_name": "Sheep",
+            "description": "Domestic sheep",
+            "category": "Mammal",
+            "habitat": "Farm, Grassland"
+        },
+        {
+            "class_id": 33,
+            "class_name": "Tiger",
+            "description": "Panthera tigris - Striped big cat",
+            "category": "Mammal",
+            "habitat": "Forest, Jungle"
+        },
+        {
+            "class_id": 34,
+            "class_name": "Turkey",
+            "description": "Domestic turkey",
+            "category": "Bird",
+            "habitat": "Farm, Forest"
+        },
+        {
+            "class_id": 35,
+            "class_name": "Zebra",
+            "description": "Various zebra species",
+            "category": "Mammal",
+            "habitat": "Savanna, Grassland"
+        }
+    ],
+    "class_statistics": {
+        "mammals": 32,
+        "birds": 4,
+        "total_classes": 36
+    },
+    "notes": {
+        "two_word_classes": [
+            "Brown bear (class_id: 1)",
+            "Polar bear (class_id: 27)",
+            "Red panda (class_id: 30)"
+        ],
+        "label_format": "YOLO format: class_id x_center y_center width height (normalized 0-1)",
+        "special_handling": "Two-word classes required special label processing to remove extra words"
+    }
+}
