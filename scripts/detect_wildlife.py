@@ -255,10 +255,14 @@ class WildlifeDetector:
             if writer:
                 writer.write(annotated_frame)
             
-            # Show frame
+            # Show frame (with error handling for Windows)
             if show_result:
-                cv2.imshow('Wildlife Detection', annotated_frame)
-                if cv2.waitKey(1) & 0xFF == ord('q'):
+                try:
+                    cv2.imshow('Wildlife Detection', annotated_frame)
+                    if cv2.waitKey(1) & 0xFF == ord('q'):
+                        break
+                except Exception as e:
+                    logging.warning(f"Could not display frame (this is normal on some systems): {e}")
                     break
             
             # Progress update
@@ -271,7 +275,10 @@ class WildlifeDetector:
         if writer:
             writer.release()
         if show_result:
-            cv2.destroyAllWindows()
+            try:
+                cv2.destroyAllWindows()
+            except:
+                pass
         
         total_time = time() - start_time
         logging.info(f"Video processing completed in {total_time:.2f}s")
