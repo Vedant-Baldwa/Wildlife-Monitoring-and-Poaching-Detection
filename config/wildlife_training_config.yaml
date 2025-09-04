@@ -11,15 +11,15 @@ training:
   amp: true
   artifact_alias: latest
   bbox_interval: -1
-  box: 0.05  # Reduced to give more weight to classification
+  box: 0.05
   cache: false
   close_mosaic: 10
-  cls: 0.5   # Increased to improve classification
+  cls: 0.5
   cos_lr: true
   dataloader: auto
   deterministic: false
   dfl: 1.0   # Reduced to prevent overfitting
-  dropout: 0.1  # Added dropout for regularization
+  dropout: 0.1 
   exist_ok: true
   export_after_train: true
   export_formats:
@@ -28,18 +28,18 @@ training:
   fraction: 1.0
   freeze: null
   kobj: 1.0
-  label_smoothing: 0.1  # Added label smoothing for class imbalance
+  label_smoothing: 0.1
   linear_lr: false
   local_rank: -1
-  lr0: 0.001  # Increased learning rate
-  lrf: 0.01   # Increased final learning rate
+  lr0: 0.001
+  lrf: 0.01
   mask_ratio: 4
   momentum: 0.937
-  name: wildlife_detection_v3  # New run name
+  name: wildlife_detection_v3 
   nbs: 64
   optimizer: AdamW
   overlap_mask: true
-  patience: 25  # Reduced patience
+  patience: 25
   plots: true
   pose: 12.0
   pretrained: true
@@ -58,17 +58,17 @@ training:
   warmup_bias_lr: 0.01
   warmup_epochs: 3.0
   warmup_momentum: 0.8
-  weight_decay: 0.001  # Increased for regularization
+  weight_decay: 0.001 
   workers: 4
   # Valid augmentation parameters for YOLOv8
-  hsv_h: 0.015  # HSV augmentation
+  hsv_h: 0.015 
   hsv_s: 0.7
   hsv_v: 0.4
-  degrees: 10.0  # Rotation augmentation
-  translate: 0.1  # Translation augmentation
-  scale: 0.5  # Scale augmentation
+  degrees: 10.0
+  translate: 0.1
+  scale: 0.5 
   shear: 0.0
   perspective: 0.0
   flipud: 0.0
-  fliplr: 0.5  # Horizontal flip
-  mosaic: 1.0  # Mosaic augmentation
+  fliplr: 0.5 
+  mosaic: 1.0
