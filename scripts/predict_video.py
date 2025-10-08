@@ -37,7 +37,7 @@ def predict_video_manual(model_path, video_path, output_path=None, confidence=0.
     """
     Manual video processing with frame-by-frame detection and custom output.
     """
-    print(f"🎥 Processing video: {video_path}")
+    print(f"Processing video: {video_path}")
     
     # Load model
     model = YOLO(model_path)
@@ -46,7 +46,7 @@ def predict_video_manual(model_path, video_path, output_path=None, confidence=0.
     # Open video
     cap = cv2.VideoCapture(str(video_path))
     if not cap.isOpened():
-        print(f"❌ Could not open video: {video_path}")
+        print(f"Could not open video: {video_path}")
         return None
     
     # Get video properties
@@ -55,21 +55,21 @@ def predict_video_manual(model_path, video_path, output_path=None, confidence=0.
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     
-    print(f"📊 Video info: {width}x{height}, {fps} FPS, {total_frames} frames")
+    print(f"Video info: {width}x{height}, {fps} FPS, {total_frames} frames")
     
     # Setup video writer
     writer = None
     if output_path:
         fourcc = cv2.VideoWriter_fourcc(*'mp4v')
         writer = cv2.VideoWriter(str(output_path), fourcc, fps, (width, height))
-        print(f"💾 Output will be saved to: {output_path}")
+        print(f"Output will be saved to: {output_path}")
     
     # Process frames
     frame_count = 0
     detection_count = 0
     start_time = time.time()
     
-    print("🔄 Processing frames...")
+    print("Processing frames...")
     
     while True:
         ret, frame = cap.read()
@@ -121,15 +121,15 @@ def predict_video_manual(model_path, video_path, output_path=None, confidence=0.
     total_time = time.time() - start_time
     avg_fps = frame_count / total_time if total_time > 0 else 0
     
-    print(f"\n✅ Video processing completed!")
-    print(f"📊 Statistics:")
+    print(f"\nVideo processing completed!")
+    print(f"Statistics:")
     print(f"   - Frames processed: {frame_count}")
     print(f"   - Total detections: {detection_count}")
     print(f"   - Average FPS: {avg_fps:.2f}")
     print(f"   - Processing time: {total_time:.2f}s")
     
     if output_path:
-        print(f"💾 Result saved to: {output_path}")
+        print(f" Result saved to: {output_path}")
     
     return frame_count
 
@@ -137,7 +137,7 @@ def predict_video_yolo(model_path, video_path, output_path=None, confidence=0.3)
     """
     Use YOLO's built-in video processing (faster but less control).
     """
-    print(f"🎥 Processing video with YOLO: {video_path}")
+    print(f"Processing video with YOLO: {video_path}")
     
     # Load model
     model = YOLO(model_path)
@@ -146,9 +146,9 @@ def predict_video_yolo(model_path, video_path, output_path=None, confidence=0.3)
     results = model(video_path, conf=confidence, save=output_path is not None, 
                    project="video_predictions", name="results")
     
-    print(f"✅ Video processing completed!")
+    print(f"Video processing completed!")
     if output_path:
-        print(f"💾 Result saved to: video_predictions/results/")
+        print(f"Result saved to: video_predictions/results/")
     
     return results
 
@@ -167,7 +167,7 @@ def main():
     
     # Validate model path
     if not Path(args.model).exists():
-        print(f"❌ Model not found: {args.model}")
+        print(f"Model not found: {args.model}")
         print("Available models:")
         models_dir = Path("results")
         for model_folder in models_dir.glob("wildlife_detection_*/weights"):
@@ -177,20 +177,20 @@ def main():
     
     # Validate input video
     if not Path(args.input).exists():
-        print(f"❌ Video not found: {args.input}")
+        print(f" Video not found: {args.input}")
         sys.exit(1)
     
     # Check video format
     video_extensions = {'.mp4', '.avi', '.mov', '.mkv', '.wmv', '.flv', '.m4v'}
     if Path(args.input).suffix.lower() not in video_extensions:
-        print(f"❌ Unsupported video format: {Path(args.input).suffix}")
+        print(f"Unsupported video format: {Path(args.input).suffix}")
         print(f"Supported formats: {', '.join(video_extensions)}")
         sys.exit(1)
     
-    print(f"🚀 Video Wildlife Detection System")
-    print(f"📦 Model: {args.model}")
-    print(f"🎯 Confidence: {args.confidence}")
-    print(f"🔧 Method: {args.method}")
+    print(f" Video Wildlife Detection System")
+    print(f"Model: {args.model}")
+    print(f"Confidence: {args.confidence}")
+    print(f"Method: {args.method}")
     print("-" * 50)
     
     try:
@@ -200,9 +200,9 @@ def main():
             predict_video_yolo(args.model, args.input, args.output, args.confidence)
     
     except KeyboardInterrupt:
-        print("\n🛑 Video processing interrupted by user")
+        print("\nVideo processing interrupted by user")
     except Exception as e:
-        print(f"\n❌ Video processing failed: {e}")
+        print(f"\nVideo processing failed: {e}")
         import traceback
         traceback.print_exc()
         sys.exit(1)
