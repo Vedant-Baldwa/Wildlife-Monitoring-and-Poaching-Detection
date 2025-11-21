@@ -370,7 +370,7 @@ with tab2:
 
         if video_src:
             # use a stable output directory (not ephemeral tmp) so we can inspect files if needed
-            out_dir = Path(r"C:\Users\vedan\Machine Learning\SWE PROJECT\new_after_midsem\runs\detect\predict3")
+            out_dir = Path(r"C:\Users\vedan\Machine Learning\SWE PROJECT\new_after_midsem\runs\detect\predict")
             try:
                 # ---------------- FAST MODE (save=True) ----------------
                 if fast_mode:
