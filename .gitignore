@@ -3,9 +3,11 @@ African Wildlife/
 Animals Dataset/
 dataset/
 Unified Dataset/
-*.jpg
-*.jpeg
-*.png
+Testing/
+predictions/
+# *.jpg
+# *.jpeg
+# *.png
 *.bmp
 *.tiff
 *.tif
