@@ -1,7 +1,7 @@
 
 # 🐾 Wildlife Monitoring and Poaching Detection  
 *A Dual-Model Computer Vision System using YOLOv8 & YOLOv8-OBB*
-### 📄 Find full project report here [Project Report](LICENSE).
+### 📄 Find full project report here [Project Report](project_report.pdf).
 
 ## 📌 Introduction
 This project presents a robust real-time wildlife monitoring and poaching detection system using two deep-learning models:
